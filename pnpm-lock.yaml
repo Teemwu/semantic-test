@@ -2,10 +2,16 @@ lockfileVersion: 5.4
 
 specifiers:
   '@semantic-release/commit-analyzer': ^9.0.2
+  '@semantic-release/github': ^8.0.6
+  '@semantic-release/npm': ^9.0.1
+  '@semantic-release/release-notes-generator': ^10.0.3
   semantic-release: ^19.0.5
 
 devDependencies:
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.5
+  '@semantic-release/github': 8.0.6_semantic-release@19.0.5
+  '@semantic-release/npm': 9.0.1_semantic-release@19.0.5
+  '@semantic-release/release-notes-generator': 10.0.3_semantic-release@19.0.5
   semantic-release: 19.0.5
 
 packages:
