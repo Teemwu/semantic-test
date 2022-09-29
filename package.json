@@ -41,8 +41,42 @@
       }
     ],
     "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits",
+          "releaseRules": [
+            {
+              "type": "build",
+              "scope": "deps",
+              "release": "patch"
+            }
+          ]
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits",
+          "presetConfig": {
+            "types": [
+              {
+                "type": "feat",
+                "section": "特性"
+              },
+              {
+                "type": "fix",
+                "section": "修复"
+              },
+              {
+                "type": "build",
+                "section": "其他",
+                "hidden": false
+              }
+            ]
+          }
+        }
+      ],
       "@semantic-release/npm",
       "@semantic-release/github"
     ]
